@@ -8,15 +8,15 @@ go
 -- tablica igraci, lozinka koristi hashbyte (md5)
 create table players (
 id int not null primary key identity (1,1),
-user_ varchar(20),
-pass char(32)
+user_ varchar(20) not null,
+pass char(32) not null
 );
 
 --tablica igra
 create table game(
 id int not null primary key identity (1,1),
-start_up datetime,
-duration int
+start_up datetime not null,
+duration int not null
 );
 
 --tablica rezultata
