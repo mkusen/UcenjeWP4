@@ -1,8 +1,8 @@
 insert into players (user_, pass) values ('Petar', 'pass'), ('Martin', 'pass');
-insert into game (start_up, duration, winner) values ('2024-5-18', 67, 1), ('2024-5-18', 89, 2);
+insert into games (start_up, duration, winner) values ('2024-5-18', 67, 1), ('2024-5-18', 89, 2);
 
 select * from players;
-select * from game;
+select * from games;
 
 select * from match_result;
 
