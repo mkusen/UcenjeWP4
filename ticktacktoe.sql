@@ -1,3 +1,5 @@
+use master;
+go
 drop database if exists ticktacktoe;
 go
 create database ticktacktoe;
