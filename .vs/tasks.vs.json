@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-ucenjeCS",
+      "appliesTo": "CSHARP/ucenje/ucenjeCS/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-ucenjeCS",
+      "appliesTo": "CSHARP/ucenje/ucenjeCS/",
+      "type": "launch"
+    }
+  ]
+}
