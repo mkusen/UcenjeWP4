@@ -24,7 +24,7 @@ namespace ucenjeCS
             }
             catch 
             {
-                Console.WriteLine("Greška. Nije upisan cijeli broj!4");
+                Console.WriteLine("Greška. Nije upisan cijeli broj!");
             }
                 
         }
