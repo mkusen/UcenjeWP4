@@ -22,7 +22,21 @@ namespace ucenjeCS
 
             Console.WriteLine(godine);
 
+            Console.WriteLine(string.Join(",", godine));
 
+            string[] gradovi = { "Osijek", "Valpovo", "Vukovar", "Vinkovci" };
+
+            Console.WriteLine(gradovi[2]);
+
+            int[,] ints = 
+                { 
+                 
+                { 0, 1, 2, 3 }, 
+                { 4, 5, 6, 7 }, 
+                { 8, 9, 10, 11 }, 
+                { 12, 13, 14, 15 } 
+            };
+            Console.WriteLine(ints[1,2]);
 
 
         }

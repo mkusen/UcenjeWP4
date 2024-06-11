@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CSHARP",
     "\\CSHARP\\ucenje",
     "\\CSHARP\\ucenje\\ucenjeCS",
-    "\\CSHARP\\ucenje\\WebAPI",
-    "\\SQL"
+    "\\CSHARP\\ucenje\\WebAPI"
   ],
-  "SelectedNode": "\\CSHARP\\ucenje\\ucenjeCS\\Program.cs",
+  "SelectedNode": "\\CSHARP",
   "PreviewInSolutionExplorer": false
 }

@@ -13,14 +13,16 @@ namespace ucenjeCS
             {
                 Console.Write("Upiši cijeli broj: ");
                 int a = int.Parse(Console.ReadLine());
-                if ((a % 2) == 0)
-                {
-                    Console.WriteLine("TRUE - upisani broj " + a + " je paran broj");
-                }
-                else
-                {
-                    Console.WriteLine("FALSE - upisani broj " + a + " je neparan broj");
-                }
+                bool bl = (a%2) == 0; 
+                Console.WriteLine(bl);
+                //if ((a % 2) == 0)
+                //{
+                //    Console.WriteLine("TRUE - upisani broj " + a + " je paran broj");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("FALSE - upisani broj " + a + " je neparan broj");
+                //}
             }
             catch 
             {
