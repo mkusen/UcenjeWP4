@@ -2,12 +2,14 @@
 
 using ucenjeCS;
 
+
+E06ForPetlja.Izvedi();
 //E05Nizovi.Izvedi();
 //E04Z01.Izvedi();
 //E04UvjetnoGrananjeSwitch.Izvedi();
 //E03Z01.Izvedi();
 //E03UvjetnoGrananjeIf.Izvedi();
-E01Z03.Izvedi();
+//E01Z03.Izvedi();
 //E01Z02.Izvedi();
 //E01Z01.Izvedi();
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
