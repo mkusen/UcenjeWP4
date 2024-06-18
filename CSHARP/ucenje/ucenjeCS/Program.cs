@@ -3,7 +3,20 @@
 using ucenjeCS;
 
 
-E06ForPetlja.Izvedi();
+
+
+
+
+
+
+
+
+
+
+
+E06ForPetljaVjezbanje.NadjiIsteBrojeve();
+//E06ForPetljaVjezbanje.Izvedi();
+//E06ForPetlja.Izvedi();
 //E05Nizovi.Izvedi();
 //E04Z01.Izvedi();
 //E04UvjetnoGrananjeSwitch.Izvedi();

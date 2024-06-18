@@ -11,15 +11,17 @@ namespace ucenjeCS
     {
         public static void Izvedi()
         {
+
+            ponovi:
             //korisnik unosi brojčani iznos ocjene
             Console.Write("unesi ocjenu: ");            
             switch (int.Parse(Console.ReadLine()))
             {
                 case 1:
-                    Console.Write("ocjena nedovoljan");
+                    Console.WriteLine("ocjena nedovoljan");
                     break;
                 case 2:
-                    Console.Write("ocjena dovoljan");
+                    Console.WriteLine("ocjena dovoljan");
                     break;
                 case 3:
                     Console.WriteLine("ocjena dobar");
@@ -34,6 +36,7 @@ namespace ucenjeCS
                     Console.WriteLine("nije ocjena");
                         break;
             }
+            goto ponovi;
         }
     }
 }
