@@ -9,12 +9,12 @@ using ucenjeCS;
 
 
 
-
-
-
-
-
-E06ForPetljaVjezbanje.NadjiIsteBrojeve();
+E10TryCatch.Izvedi();
+//E09ForEachPetlja.Izvedi();
+//E08DoWhilePetlja.Izvedi();
+//E07Z01.Izvedi();
+//E07WhilePetlja.Izvedi();
+//E06ForPetljaVjezbanje.NadjiIsteBrojeve();
 //E06ForPetljaVjezbanje.Izvedi();
 //E06ForPetlja.Izvedi();
 //E05Nizovi.Izvedi();
