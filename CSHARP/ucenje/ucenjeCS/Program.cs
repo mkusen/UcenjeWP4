@@ -5,8 +5,8 @@ using ucenjeCS;
 
 
 
-
-E12Rekurzija.Izvedi();
+DZ01CiklicnaTablica.Izvedi();
+//E12Rekurzija.Izvedi();
 //E11Z01.Izvedi();
 //E11Metode.Izvedi();
 //E10TryCatch.Izvedi();
