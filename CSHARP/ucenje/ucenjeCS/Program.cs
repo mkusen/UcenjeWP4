@@ -1,11 +1,13 @@
 ﻿
 
 using ucenjeCS;
+using ucenjeCS.E13KlasaObjekt;
 
 
 
+ucenjeCS.E13KlasaObjekt.Program.Izvedi();
 
-DZ01CiklicnaTablica.Izvedi();
+//DZ01CiklicnaTablica.Izvedi();
 //E12Rekurzija.Izvedi();
 //E11Z01.Izvedi();
 //E11Metode.Izvedi();

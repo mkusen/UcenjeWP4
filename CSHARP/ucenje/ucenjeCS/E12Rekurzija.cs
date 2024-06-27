@@ -14,7 +14,7 @@ namespace ucenjeCS
         {
             do
             {
-           
+            
             Console.WriteLine(Zbroj(Pomocno.UcitajCijeliBroj("unesi broj za sumu brojeva do tog broja")));
 
             } while (Pomocno.UcitajCijeliBroj("-1 za prekid") != -1);
