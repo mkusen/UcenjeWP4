@@ -21,10 +21,15 @@ namespace ucenjeCS
             //{
             //    Console.Write(c-- + " ");
             //}
+
+
+            
+                
+            }
         }
   
     }
 
 
     
-}
+

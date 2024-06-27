@@ -28,25 +28,25 @@ namespace ucenjeCS
                     int c = a;
                     int d = b + a;
                     int e = a * b;
-
                     //određuje broj redova
-                    for (int j = 1; j <= b; j++)
+                    for (int j = 1; j < e; j++)
                     {
-                        Console.Write(d-- + "\n");
-
+                       Console.Write(j++ + "\n");
+                    
                     }
                     //određuje broj stupaca
-                    for (int i = 1; i <= a; i++)
-                    {
-                        Console.Write(c-- + " ");
-                    }
+                    //for (int i = 1; i <= a; i++)
+                    //{
+                    //    Console.Write(c-- + " ");
+                    //}
 
 
-                    Console.WriteLine();
+                    Console.WriteLine("");
+
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    Console.WriteLine( "nisi upisao broj");
+                    Console.WriteLine( "nisi upisao broj\n" + e.Message);
                 }
             } while (true);
           
