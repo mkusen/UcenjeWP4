@@ -8,7 +8,7 @@ using ucenjeCS.E13KlasaObjekt;
 //ucenjeCS.E13KlasaObjekt.Program.Izvedi();
 
 //DZCiklicnaTablicaMetode.Test();
-DZ01CiklicnaTablica.Izvedi();
+DZ01CiklicnaTablica.Matrix1();
 //E12Rekurzija.Izvedi();
 //E11Z01.Izvedi();
 //E11Metode.Izvedi();
