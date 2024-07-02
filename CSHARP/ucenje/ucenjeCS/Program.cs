@@ -5,10 +5,14 @@ using ucenjeCS.E13KlasaObjekt;
 
 
 
+
+new ucenjeCS.E15RadSStringovima.Program();
+//new ucenjeCS.E14Nasljedjivanje.Program();
+
 //ucenjeCS.E13KlasaObjekt.Program.Izvedi();
 
 //DZCiklicnaTablicaMetode.Test();
-DZ01CiklicnaTablica.Matrix1();
+//DZ01CiklicnaTablica.Matrix1();
 //E12Rekurzija.Izvedi();
 //E11Z01.Izvedi();
 //E11Metode.Izvedi();
