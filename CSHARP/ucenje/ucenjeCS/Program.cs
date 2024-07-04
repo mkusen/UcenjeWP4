@@ -1,21 +1,12 @@
 ﻿
 
-using ucenjeCS;
-using ucenjeCS.E13KlasaObjekt;
 
 
-
-
-
-
-new ucenjeCS.DomacaZadaca.Program();
-
+new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
+//new ucenjeCS.DomacaZadaca.Program();
 //new ucenjeCS.E15RadSStringovima.Program();
 //new ucenjeCS.E14Nasljedjivanje.Program();
-
 //ucenjeCS.E13KlasaObjekt.Program.Izvedi();
-
-
 //E12Rekurzija.Izvedi();
 //E11Z01.Izvedi();
 //E11Metode.Izvedi();
@@ -24,7 +15,6 @@ new ucenjeCS.DomacaZadaca.Program();
 //E08DoWhilePetlja.Izvedi();
 //E07Z01.Izvedi();
 //E07WhilePetlja.Izvedi();
-
 //E06ForPetljaVjezbanje.multiplicationTable();
 //E06ForPetljaVjezbanje.NadjiIsteBrojeve();
 //E06ForPetljaVjezbanje.Izvedi();
@@ -39,9 +29,6 @@ new ucenjeCS.DomacaZadaca.Program();
 //E01Z01.Izvedi();
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
 //E01UlazIzlaz.Izvedi();
-
-
-
 // See https://aka.ms/new-console-template for more information
 /*
  * 
@@ -54,7 +41,6 @@ new ucenjeCS.DomacaZadaca.Program();
 
 /*
 Console.WriteLine("Hello, World!");
-
 Console.Write("Mario");
 Console.Write(" Kušen");
 Console.WriteLine(value: " 2");

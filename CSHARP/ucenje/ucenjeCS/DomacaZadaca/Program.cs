@@ -11,7 +11,7 @@ namespace ucenjeCS.DomacaZadaca
         public Program()
         {
             //DZ01CiklicnaTablica.Matrix();
-            DZ02LjubavniKalkulator.LjubavniKalk();
+            //DZ02LjubavniKalkulator.LjubavniKalk();
         }    
     }
 }
