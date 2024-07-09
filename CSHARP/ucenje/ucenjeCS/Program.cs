@@ -4,6 +4,11 @@
 
 //new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
 new ucenjeCS.DomacaZadaca.Program();
+new ucenjeCS.E18KonzolnaAplikacija.Izbornik();
+//new ucenjeCS.E17Subota.Raspored();
+//new ucenjeCS.E17Subota.Program();
+//new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
+//new ucenjeCS.DomacaZadaca.Program();
 //new ucenjeCS.E15RadSStringovima.Program();
 //new ucenjeCS.E14Nasljedjivanje.Program();
 //ucenjeCS.E13KlasaObjekt.Program.Izvedi();
