@@ -1,4 +1,5 @@
 ﻿
+using System.Security.Cryptography.X509Certificates;
 using ucenjeCS.E18KonzolnaAplikacija.Model;
 
 namespace ucenjeCS.E18KonzolnaAplikacija
@@ -9,10 +10,7 @@ namespace ucenjeCS.E18KonzolnaAplikacija
 
         public ObradaSmjer() 
         { 
-        
             Smjerovi = new List<Smjer>();
-
-
         }   
         public void PrikaziIzbornik()
         {
@@ -23,7 +21,6 @@ namespace ucenjeCS.E18KonzolnaAplikacija
             Console.WriteLine("4. Brisanje smjera");
             Console.WriteLine("5. Povratak na glavni izbornik");
             OdabirOpcijeIzbornika();
-
 
         }
 
@@ -38,7 +35,7 @@ namespace ucenjeCS.E18KonzolnaAplikacija
                     break;
                 case 2:
                     UnosNovogSmjer();
-                    PrikaziIzbornik();
+                   
                     break;
 
                     case 3:
@@ -54,19 +51,41 @@ namespace ucenjeCS.E18KonzolnaAplikacija
 
         private void PrikaziSmjerove()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("*****************************\nSmjerovi u aplikaciji redom:\n");
+            foreach (var s in Smjerovi)
+            {
+                Console.WriteLine(s + "\n*****************************");
+            }
         }
 
-        private void UnosNovogSmjer()
+        private void UnosNovogSmjer()            
         {
-            Console.WriteLine("********************************");
-            Console.WriteLine("Unesite tražene podatke o smjeru");
+
+            Console.WriteLine("********************************\nUnesite tražene podatke o smjeru");
             Smjerovi.Add(new()
             {
                 Sifra = Pomocno.UcitajRasponBroja("Unesi šifru smjera", 1, int.MaxValue),
                 Naziv = Pomocno.UcitajString("Unesi naziv smjera", 50, true),
-                Cijena = Pomocno.UcitajDecimalniBroj("Unwsi cijenu smjera", 0, 10000)
+                Trajanje = Pomocno.UcitajRasponBroja("Unesi trajanje smjera", 1, 500),
+                Cijena = Pomocno.UcitajDecimalniBroj("Unesi cijenu smjera", 0, 10000),
+                IzvodiSeOd = Pomocno.UcitajDatum("Unesi datum od kada se izvodi smjer", true),
+                Verificiran = Pomocno.UcitajBool("Da li je smjer verificiran (DA/NE)", "da")
+
             });
+
+            //ponavlja unosa novog smjera dok korisnik ne kaže "ne"
+            Console.Write("Želite li unijeti još jedan? (DA/NE): "); 
+           if(Console.ReadLine().ToLower().Trim() == "da")
+            {
+                UnosNovogSmjer();
+            }
+            else {
+                Console.WriteLine("********************************");
+                PrikaziIzbornik();               
+            }
+         
+            Console.WriteLine("********************************");
         }
+
     }
 }
