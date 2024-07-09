@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ucenjeCS.DomacaZadaca
@@ -12,30 +15,18 @@ namespace ucenjeCS.DomacaZadaca
         {
 
             Console.Write("upiši prvo ime: ");
-            var imePrvo=Console.ReadLine();
+            var imePrvo = Console.ReadLine();
 
             Console.Write("upiši drugo ime: ");
             var imeDrugo = Console.ReadLine();
 
-            var brojPrvi=0; 
-            string[] nizImePrvo = new string[imePrvo.Length];
+            var obaImena = imePrvo + imeDrugo;
+            List<string> listObaImena = new List<string>();
 
-            var brojDrugi=0;
-            string[] nizImeDrugo = new string[imeDrugo.Length];
+            listObaImena.Add(obaImena);
+            
 
-            for (var i = 0; i < imePrvo.Length; i++)
-            {
-                brojPrvi++; 
-                nizImePrvo[i] = imePrvo[i].ToString(); // ubacuje slova u niz
-                Console.WriteLine($"Character {brojPrvi}: {nizImePrvo[i]}");
-            }
 
-            for (var j  = 0; j < imeDrugo.Length; j++)
-            {
-                brojDrugi++;
-                nizImeDrugo[j] = imeDrugo[j].ToString(); // ubacuje slova u niz
-                Console.WriteLine($"Character {brojDrugi}: {nizImeDrugo[j]}");
-            }
 
         }
     }

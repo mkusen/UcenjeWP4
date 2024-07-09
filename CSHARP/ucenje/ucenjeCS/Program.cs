@@ -2,8 +2,8 @@
 
 
 
-new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
-//new ucenjeCS.DomacaZadaca.Program();
+//new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
+new ucenjeCS.DomacaZadaca.Program();
 //new ucenjeCS.E15RadSStringovima.Program();
 //new ucenjeCS.E14Nasljedjivanje.Program();
 //ucenjeCS.E13KlasaObjekt.Program.Izvedi();
