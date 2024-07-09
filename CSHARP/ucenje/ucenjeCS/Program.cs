@@ -1,6 +1,7 @@
 ﻿
 
-new ucenjeCS.E17Subota.Raspored();
+new ucenjeCS.E18KonzolnaAplikacija.Izbornik();
+//new ucenjeCS.E17Subota.Raspored();
 //new ucenjeCS.E17Subota.Program();
 //new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
 //new ucenjeCS.DomacaZadaca.Program();
