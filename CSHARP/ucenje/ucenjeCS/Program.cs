@@ -6,7 +6,7 @@
 
 
 //new ucenjeCS.DomacaZadaca.Program();
-new ucenjeCS.E18KonzolnaAplikacija.Izbornik();
+new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 
 //new ucenjeCS.E16GenericiLambdaiEkstenzije.Program();
 

@@ -1,60 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UcenjeCS.E18KonzolnaAplikacija.Pomocno;
 
-namespace ucenjeCS.E18KonzolnaAplikacija
+namespace UcenjeCS.E18KonzolnaAplikacija
 {
-    internal class Izbornik
+    internal class Izbornik:PomocnoEntitet
     {
 
-        public ObradaSmjer ObradaSmjer { get; set; }=new ObradaSmjer(); // ne moram raditi instancu u konstruktoru
+
+
         public Izbornik() 
         {
+            //Pomocno.PomocnoIzbornik.DEV = true;
+
+            obradaSmjer = new ObradaSmjer();
+            obradaPolaznik = new ObradaPolaznik();
+            obradaGrupa = new ObradaGrupa();
+            pomocnoIzbornik = new PomocnoIzbornik();
+
+            pomocnoIzbornik.UcitajPodatke();
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
 
+        private void PozdravnaPoruka()
+        {
+            Console.WriteLine("*********************************\n*** Edunova Console App v 1.0 ***\n*********************************");
+        }
+
+
         private void PrikaziIzbornik()
         {
-            Console.WriteLine("Glavni izbornik");
-            Console.WriteLine("1. Smjerovi");
-            Console.WriteLine("2. Polaznici");
-            Console.WriteLine("3. Grupe");
-            Console.WriteLine("4. Izlaz iz programa");
+            Console.WriteLine("Glavni izbornik\n1. Smjerovi\n2. Polaznici\n3. Grupe\n4. Izlaz iz programa");
             OdabirOpcijeIzbornika();
         }
 
         private void OdabirOpcijeIzbornika()
         {
-            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 4))
+            
+            switch(Pomocno.PomocnoObrada.UcitajRasponBroja("Odaberite stavku izbornika", 1, 4))
             {
                 case 1:
                     Console.Clear();
-                    ObradaSmjer.PrikaziIzbornik();
+                    obradaSmjer.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 2:
                     Console.Clear();
+                    obradaPolaznik.PrikaziIzbornik();
+                    PrikaziIzbornik();
                     break;
                 case 3:
-                    Console.Clear();
+                    Console.Clear();                    
+                    obradaGrupa.PrikaziIzbornik();
+                    PrikaziIzbornik();
                     break;
                 case 4:
-                    Console.WriteLine("Hvala na korištenju aplikacije, doviđenja!");
+                    pomocnoIzbornik.SpremiPodatke();
+                    Console.WriteLine("Hvala na korištenju aplikacije, doviđenja!");                   
                     break;
-
             }
-
         }
 
-        private void PozdravnaPoruka()
-        {
-            Console.WriteLine("*********************************\n" +
-                              "*** Edunova Console App v 1.0 ***\n" +
-                                "*********************************");
-            
-        }
+
+       
     }
 }

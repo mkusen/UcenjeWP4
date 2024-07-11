@@ -1,13 +1,17 @@
-﻿using ucenjeCS.E18KonzolnaAplikacija.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ucenjeCS.E18KonzolnaAplikacija
+namespace UcenjeCS.E18KonzolnaAplikacija.Pomocno
 {
-    internal class Pomocno
+    internal class PomocnoObrada
     {
-      
+
+
         internal static bool UcitajBool(string poruka, string trueValue)
         {
-
             Console.Write(poruka + ": ");
             return Console.ReadLine().Trim().ToLower() == trueValue;
         }
@@ -41,7 +45,7 @@ namespace ucenjeCS.E18KonzolnaAplikacija
             }
         }
 
-        internal static float? UcitajDecimalniBroj(string poruka, int min, float max)
+        internal static float UcitajDecimalniBroj(string poruka, int min, float max)
         {
             float b;
             while (true)
@@ -49,7 +53,6 @@ namespace ucenjeCS.E18KonzolnaAplikacija
                 try
                 {
                     Console.Write(poruka + ": ");
-
                     b = float.Parse(Console.ReadLine());
                     if (b < min || b > max)
                     {
@@ -57,15 +60,11 @@ namespace ucenjeCS.E18KonzolnaAplikacija
                     }
                     return b;
                 }
-                catch (Exception)
+                catch
                 {
                     Console.WriteLine("Decimalni broj mora biti u rasponu {0} i {1}", min, max);
-
                 }
-
-
             }
-
         }
 
         internal static int UcitajRasponBroja(string poruka, int min, int max)
@@ -73,30 +72,21 @@ namespace ucenjeCS.E18KonzolnaAplikacija
             int b;
             while (true)
             {
-
                 try
                 {
                     Console.Write(poruka + ": ");
                     b = int.Parse(Console.ReadLine());
-
                     if (b < min || b > max)
                     {
-
                         throw new Exception();
                     }
-
                     return b;
                 }
-                catch (Exception)
+                catch
                 {
-
-                    Console.WriteLine("unos nije dobar, unos mora biti u rasponu {0} do {1}", min, max);
+                    Console.WriteLine("Unos nije dobar, unos mora biti u rasponu {0} do {1}", min, max);
                 }
-
-
-
             }
-
         }
 
         internal static string UcitajString(string poruka, int max, bool obavezno)
@@ -108,9 +98,28 @@ namespace ucenjeCS.E18KonzolnaAplikacija
                 s = Console.ReadLine().Trim();
                 if ((obavezno && s.Length == 0) || s.Length > max)
                 {
-                    Console.WriteLine("Unos obavezan, maksimalno dozvoleno {0} znakova", max);
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
                     continue;
+                }
+                return s;
+            }
+        }
 
+        internal static string UcitajString(string stara, string poruka, int max, bool obavezno)
+        {
+            string s;
+            while (true)
+            {
+                Console.Write(poruka + " (" + stara + "): ");
+                s = Console.ReadLine().Trim();
+                if (s.Length == 0)
+                {
+                    return stara;
+                }
+                if ((obavezno && s.Length == 0) || s.Length > max)
+                {
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
+                    continue;
                 }
                 return s;
             }
