@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UcenjeCS", "UcenjeCS\Ucenje
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{9BD1075A-7706-4AA6-A146-B3C4FB8C2472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdunovaAPP", "EdunovaAPP\EdunovaAPP.csproj", "{577C1BF3-9EEA-4953-9248-72632BC2E133}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdunovaAPP", "EdunovaAPP\EdunovaAPP.csproj", "{88FCC9E2-B182-468D-9F18-62E251C87282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{9BD1075A-7706-4AA6-A146-B3C4FB8C2472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BD1075A-7706-4AA6-A146-B3C4FB8C2472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BD1075A-7706-4AA6-A146-B3C4FB8C2472}.Release|Any CPU.Build.0 = Release|Any CPU
-		{577C1BF3-9EEA-4953-9248-72632BC2E133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{577C1BF3-9EEA-4953-9248-72632BC2E133}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{577C1BF3-9EEA-4953-9248-72632BC2E133}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{577C1BF3-9EEA-4953-9248-72632BC2E133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FCC9E2-B182-468D-9F18-62E251C87282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FCC9E2-B182-468D-9F18-62E251C87282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FCC9E2-B182-468D-9F18-62E251C87282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FCC9E2-B182-468D-9F18-62E251C87282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,30 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS
+namespace UcenjeCS
 {
     internal class Pomocno
     {
-        public static int UcitajCijeliBroj(){
 
-            while (true)
+        public static int UcitajCijeliBroj()
+        {
+            while(true)
             {
                 try
                 {
-                    Console.Write("unesi cijeli broj: ");
-                    return int.Parse(Console.ReadLine());   
+                    Console.Write("Unesi cijeli broj: ");
+                    return int.Parse(Console.ReadLine());
                 }
-                catch (Exception)
+                catch // i ne mora se staviti Exception
                 {
-                    Console.WriteLine("pogreška prilikom unosa");
+                    Console.WriteLine("Pogreška prilikom unosa!");
                 }
             }
-                    
         }
 
         public static int UcitajCijeliBroj(string poruka)
         {
-
             while (true)
             {
                 try
@@ -35,13 +34,14 @@ namespace ucenjeCS
                     Console.Write(poruka + ": ");
                     return int.Parse(Console.ReadLine());
                 }
-                catch (Exception)
+                catch // i ne mora se staviti Exception
                 {
-                    Console.WriteLine("pogreška prilikom unosa");
+                    Console.WriteLine("Pogreška prilikom unosa!");
                 }
             }
-
         }
+
+
 
     }
 }

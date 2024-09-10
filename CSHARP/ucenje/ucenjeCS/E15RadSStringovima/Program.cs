@@ -5,34 +5,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS.E15RadSStringovima
+namespace UcenjeCS.E15RadSStringovima
 {
     internal class Program
     {
 
-        //konstruktor
+        // konstruktor
         public Program() 
         {
-            //string je immutable - nepromjenjiv
+
+            //https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings
+            // string je immutable - nepromjenjiv
+
             var s = "Edunova";
-            Console.WriteLine(s.GetHashCode() + " " + s);
+
+            Console.WriteLine(s.GetHashCode());
 
             s = "Osijek";
 
-            Console.WriteLine(s.GetHashCode() + " " + s);
+            Console.WriteLine(s.GetHashCode());
 
-            var sb=new StringBuilder();
+            var sb  = new StringBuilder();
 
             sb.AppendLine("Edunova");
+
+            Console.WriteLine(sb.GetHashCode());
+
             sb.Clear();
+
             sb.AppendLine("Osijek");
-            Console.WriteLine(s.GetHashCode() + " " + sb);
 
-            //u radu s stringovima se preporuča koristiti StringBuilder klasu
+            Console.WriteLine(sb.GetHashCode());
 
-            sb=new StringBuilder();
+
+            s = "a";
+            s += " b";
+            s += "c";
+
+            Console.WriteLine(s);
+
+            // U radu s stringovima se preporuča koristiti StringBulider klasu
+
+            sb = new StringBuilder();
             sb.Append('a');
-            sb.Append("b");
+            sb.Append(" b");
             sb.Append('c');
 
             Console.WriteLine(sb);
@@ -40,17 +56,21 @@ namespace ucenjeCS.E15RadSStringovima
             Console.WriteLine(s.ToLower());
             Console.WriteLine(s.ToUpper());
             s = "Osijek";
-            Console.WriteLine(s.Substring(1,2 ));
-            s = "    ana marija";
-            Console.WriteLine(">{0}<", s);
+            Console.WriteLine(s.Substring(1));
+            Console.WriteLine(s.Substring(1,2));
+
+            s = "   Ana Marija ";
+            Console.WriteLine(">{0}<",s);
             Console.WriteLine(">{0}<", s.Trim());
+
             Console.WriteLine(s.Replace('a','b'));
-            //veliko A zamijenio s malim b
+
+            // veliko A i malo a zamjenjeno na malo b
             Console.WriteLine(s.Replace("a","b",true,CultureInfo.CurrentCulture));
 
-            
+           
 
-        }    
+        }
 
     }
 }

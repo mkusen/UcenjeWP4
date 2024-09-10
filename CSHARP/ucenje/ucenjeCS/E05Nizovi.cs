@@ -1,44 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS
+namespace UcenjeCS
 {
     internal class E05Nizovi
     {
+
         public static void Izvedi()
         {
-            //eng.Arrays ili polja na HR
+
+            // eng. Arrays
+            // još na HR polja
+
             // jednodimenzionalni niz
-            // AltGr + F = []
-            int[] godine = new int[12];
+            // AltGr + F je uglata zagrada [
+            int[] godine = new int[17];
 
-            godine[0] = 43; //element na indexu 0 poprima vijednost 43
-
-            godine[godine.Length - 1] = 25; //na zadnji element postavlja vrijednost 25
+            godine[0] = 43; // Element na indesu 0 poprima vrijednost 43
+            //...
+            godine[godine.Length - 1] = 23; // na zadnji element postavljam vrijednost 23
 
             Console.WriteLine(godine);
-
             Console.WriteLine(string.Join(",", godine));
 
-            string[] gradovi = { "Osijek", "Valpovo", "Vukovar", "Vinkovci" };
 
-            Console.WriteLine(gradovi[2]);
+            // skraćena sintaksa definiranja niza skupa s zadanim vrijednostima
 
-            int[,] ints = 
-                { 
-                 
-                { 0, 1, 2, 3 }, 
-                { 4, 5, 6, 7 }, 
-                { 8, 9, 10, 11 }, 
-                { 12, 13, 14, 15 } 
+            int[] niz = { 2, 8, 4, 5, 6, 7, 5, 4, 3, 4, 5, 5, 5 };
+
+            //ispiši broj 8
+            Console.WriteLine(niz[1]);
+
+            string[] gradovi = { "Osijek", "Donji Miholjac", "Valpovo" };
+
+
+            // dvodimenzionalni niz
+            // tablica, matrica
+
+            int[,] tablica = {
+                {1,2,3 },
+                {4,5,6 },
+                {7,8,9 }
             };
-            Console.WriteLine(ints[1,2]);
+
+            // ispiši broj 3
+            Console.WriteLine(tablica[0,2]);
+
+
+
+            // zvjezdane staze
+            int[,,,,] multiverse = new int[10, 10, 10, 10,10];
+
+
+            // smisao nizova u CSHARP je da budu istog tipa
+
+            object[] objekti = { 1, "Pero", true, 2.2 };
 
 
         }
+
     }
 }

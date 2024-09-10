@@ -1,36 +1,26 @@
 ﻿
-
-namespace ucenjeCS
+namespace UcenjeCS
 {
     internal class E01UlazIzlaz
     {
 
         public static void Izvedi()
         {
-            //Console.WriteLine("Hello world!");
-            //string ime;
 
-            //Console.Write("Unesi ime: ");
+            string ime;
 
-            //ime=Console.ReadLine();
+            Console.Write("Unesi ime: ");
 
-            //Console.WriteLine(ime);
+            ime = Console.ReadLine();
+            
+            Console.WriteLine(ime);
 
-            string adresa;
-            string grad;
-
-            Console.Write("Unesi adresu: ");
-            adresa = Console.ReadLine();
-            Console.Write("Unesi grad: ");
-            grad = Console.ReadLine();
-
-            Console.WriteLine(adresa + " ulica, " + grad);      
-
-            //Console.WriteLine(grad);
-
+            // zadatak: Unijeti Adresu i grad te ispisati jedno ispod drugog adresu i grad
+            
 
         }
 
+        
 
     }
 }

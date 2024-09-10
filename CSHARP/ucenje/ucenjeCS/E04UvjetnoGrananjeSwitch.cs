@@ -4,30 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS
+namespace UcenjeCS
 {
     internal class E04UvjetnoGrananjeSwitch
     {
+
         public static void Izvedi()
         {
-            //ako je i = 0 ispiši 1.DOBAR, 2.LOŠ, 3.ZAO
+
+            // ako je i==0 ispiši DOBAR, 1 LOŠ, 2 ZAO
+
             int i = 0;
-            switch (i)
+
+            switch (i) // radi s int, string i char tipovima podataka
             {
                 case 0:
-                    Console.WriteLine("dobar");
+                    Console.WriteLine("Dobar");
                     break;
-                    case 1: 
-                    Console.WriteLine("loš");
+                case 1:
+                    Console.WriteLine("Loš");
                     break;
-                    case 2:
-                    Console.WriteLine("zao");
+                case 2:
+                    Console.WriteLine("ZAO");
                     break;
-                    default: 
-                    Console.WriteLine("nije definirano");
+                default: // to je else u if-u
+                    Console.WriteLine("Nije definirano");
                     break;
             }
 
+            // Korisnik unosi brojčani iznos ocjene. Program ispisuje
+            // tekstualno ocjenu
+
         }
+
     }
 }

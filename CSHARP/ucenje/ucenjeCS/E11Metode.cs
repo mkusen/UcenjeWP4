@@ -1,128 +1,134 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS
+namespace UcenjeCS
 {
     internal class E11Metode
     {
+
         public static void Izvedi()
         {
-            //poziv metode Tip1
-            //for (int i = 1; i < 56; i++) {
-            //    Console.WriteLine("red " + i);
-            //    Tip1();
-            //}
+            // Poziv metode
+            Tip1();
+            Tip1();
 
-            //Tip2("edunova");
-            //Console.WriteLine("unesi ime: ");
-            //string ime = Console.ReadLine();
-            //Console.WriteLine("unesi prezime: ");
-            //string prezime = Console.ReadLine();
-            //Tip2(ime, prezime);
-
-
-
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    int broj = Tip3();
-            //    Console.WriteLine(broj);
-            //}
-
-            //Console.WriteLine(Tip4(2, 10)); 
-
-            //ispiši sve prim brojeve od dva unesena broja
-
-            int odBroja = Pomocno.UcitajCijeliBroj("unesi od broja");
-            int doBroja = Pomocno.UcitajCijeliBroj("unesi do broja");
-
-            for (int i = odBroja; i < doBroja; i++)
+            for (int i = 0; i < 55; i++)
             {
-                if (primBroj(i)){
+                Tip1();
+            }
+
+            Tip2("Edunova");
+
+            Console.WriteLine("Unesi ime: ");
+            Tip2(Console.ReadLine());
+
+            Tip2();
+
+            Tip2("Pero", "Perić");
+
+
+            int broj = Tip3();
+            Console.WriteLine(broj);
+
+            for(int i = 0;i < 55; i++)
+            {
+                Console.WriteLine(Tip3());
+            }
+
+            Console.WriteLine(Tip4(2,8));
+
+
+            // ispiši sve prim brojeve od dva unesena broj
+            int odBroja = Pomocno.UcitajCijeliBroj("Unesi od broja");
+            int doBroja = Pomocno.UcitajCijeliBroj("Unesi do broja");
+            for (int i = odBroja;i < doBroja; i++)
+            {
+                if (primBroj(i))
+                {
                     Console.WriteLine(i);
                 }
             }
-           
+
         }
 
-        //tip 1 metoda ne prima i ne vraća vrijednost
+        // Tip 1. Metoda ne prima parametre i ne vraća vrijednost
+        // ovdje je deklarirana, napisana
+        // private se vidi samo u trenutnoj klasi
         private static void Tip1()
         {
-            Console.WriteLine("hello iz metode koja ne prima parametre i ne vraća vrijednost");
-            Console.WriteLine("drugi red");
-            Console.WriteLine("treći red");
+            Console.WriteLine("Hello iz metode koja ne prima parametre i ne vraća vrijednost");
+            Console.WriteLine("Drugi red");
+            Console.WriteLine("Treći red");
         }
 
-        //tip 2 prima parametar, ali ne vraća vrijednost
-
-        static void Tip2(string ime) {
-            Console.WriteLine("Hello {0}", ime);
+        // Tip 2. metoda prima parametre i ne vraća vrijednost
+        // kada ispred [static] void nema načina pristupa tada je private
+        static void Tip2(string ime="Nije postavljeno") // opcionalan parametar 
+        {
+            Console.WriteLine("Hello {0}",ime);
         }
 
+        // naziv metode ne mora biti jedinstven
+
+        // potpis metode: naziv + lista parametara
+        // method signature
+        // method overloading
         static void Tip2(string ime, string prezime)
         {
-            Console.WriteLine("hello {0} {1}", ime, prezime);
+            Console.WriteLine("Hello {0} {1} {2} {3}",ime,prezime,ime,ime);
+            
         }
 
-        //tip 3 metoda ne prima parametre i vraća vrijednost
-
+        // Tip 3. metoda ne prima parametre i vraća vrijednost
         static int Tip3()
         {
-            return new Random().Next(20,30); 
 
-            //return '7'; //vraća prema ASCII tablici
+            return new Random().Next(20, 30);
+
+ 
+
+            //return '7'; // return vraća vrijednost onome tko je pozvao metodu
+            // vraća prema ACSII tablici, pogledati https://simple.m.wikipedia.org/wiki/File:ASCII-Table-wide.svg
         }
 
-        //tip 4, prima parametar i vraća vrijednost
 
+        // Tip 4. NAJBITNIJI metoda prima parametre, metoda vraća vrijednost
+        // protected je vidljiv u ovoj klasi u svim podklasama (OOP - kasnije)
         /// <summary>
-        /// Metoda za dva primljena cijela broja, vraća zbroj svih brojeva između njih
+        /// Metoda za dva primljena cijela broja vraća zbroj svih brojeva između njih
         /// </summary>
-        /// <param name="odBroja">Broj od kojeg se kreće uključujući taj broj</param>
+        /// <param name="odBroja">Broj od kojeg se kreće ujključujući taj broj</param>
         /// <param name="doBroja">Broj do kojeg se ide uključujući taj broj</param>
-        /// <returns>Zbroj brojeva između dva primljena</returns>
-        protected static int Tip4(int odBroja, int doBroja) 
+        /// <returns>Zbroj brojeva između dva primljena broja</returns>
+        protected static int Tip4(int odBroja, int doBroja)
         {
-
             int suma = 0;
-            for (int i = odBroja; i <= doBroja; i++)
+            for(int i = odBroja; i <= doBroja; i++)
             {
-                suma += 1;
+                suma += i;
             }
 
             return suma;
             //throw new NotImplementedException(); može i ovako
         }
 
-        //primjer metode s više return izraza
 
-        static bool primBroj(int broj) 
+        // primjer metode s više return izraza
+        static bool primBroj(int broj)
         {
-
-            for (int i = 2; i < broj; i++)
+            for(int i = 2; i < broj; i++)
             {
-
-                if (broj%i==0)
+                if(broj % i == 0)
                 {
                     return false;
                 }
-
-
             }
-
 
             return true;
         }
-
-
-
-
-
-
-
 
     }
 }

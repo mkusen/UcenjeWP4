@@ -1,6 +1,5 @@
 ﻿using EdunovaAPP.Data;
 using EdunovaAPP.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdunovaAPP.Controllers
@@ -8,35 +7,39 @@ namespace EdunovaAPP.Controllers
 
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class SmjerController : ControllerBase
+    public class SmjerController:ControllerBase
     {
-        //dependecy injection
-        //1. definiraš privatno svojstvo
+
+        // dependecy injection
+        // 1. definiraš privatno svojstvo
         private readonly EdunovaContext _context;
 
-        //2.proslijediš instancu kroz konstruktor
+
+        // dependecy injection
+        // 2. proslijediš instancu kroz konstruktor
         public SmjerController(EdunovaContext context)
         {
             _context = context;
         }
 
-        //rute
 
+        // RUTE
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_context.Smjerovi);
         }
 
+
         [HttpGet]
         [Route("{sifra:int}")]
-        public IActionResult GetBySifra(int sifra)
+        public IActionResult GetBySifra(int sifra) 
         {
             return Ok(_context.Smjerovi.Find(sifra));
         }
 
         [HttpPost]
-        public IActionResult Post(Smjer smjer)
+        public IActionResult Post(Smjer smjer) 
         {
             _context.Smjerovi.Add(smjer);
             _context.SaveChanges();
@@ -45,35 +48,37 @@ namespace EdunovaAPP.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        [Produces("application/jason")]
-        public IActionResult Put(int sifra, Smjer smjer)
-        {
+        [Produces("application/json")]
+        public IActionResult Put(int sifra, Smjer smjer) 
+        { 
             var smjerIzBaze = _context.Smjerovi.Find(sifra);
-            smjerIzBaze.Naziv = smjer.Naziv;
-            smjerIzBaze.Trajanje  = smjer.Trajanje;
-            smjerIzBaze.Cijena = smjer.Cijena;
-            smjerIzBaze.IzvodiSeOd = smjer.IzvodiSeOd;
-            smjerIzBaze.Vaucer = smjer.Vaucer;
 
+            // za sada ručno, kasnije Mapper
+            smjerIzBaze.Naziv = smjer.Naziv;
+            smjerIzBaze.Trajanje = smjer.Trajanje;
+            smjerIzBaze.Cijena = smjer.Cijena;
+            smjerIzBaze.IzvodiSeOd= smjer.IzvodiSeOd;
+            smjerIzBaze.Vaucer = smjer.Vaucer;
 
             _context.Smjerovi.Update(smjerIzBaze);
             _context.SaveChanges();
 
-            return Ok(new { poruka = "Uspješno promijenjeno" });
-
+            return Ok(new {poruka= "Uspješno promjenjeno" });
+        
         }
 
         [HttpDelete]
         [Route("{sifra:int}")]
-        [Produces("application/jason")]
-
+        [Produces("application/json")]
         public IActionResult Delete(int sifra)
         {
             var smjerIzBaze = _context.Smjerovi.Find(sifra);
             _context.Smjerovi.Remove(smjerIzBaze);
             _context.SaveChanges();
-            return Ok(new { poruka = "uspješno obrisano" });
+            return Ok(new { poruka = "Uspješno obrisano" });
         }
+
+
 
     }
 }

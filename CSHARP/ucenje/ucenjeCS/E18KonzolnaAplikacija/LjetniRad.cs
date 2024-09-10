@@ -27,10 +27,10 @@
         //Osigurati unos brojeva redova i kolona u rasponu 2 do 50
         //Napraviti da nakon završetka generiranja jedne matrice pita želite li napraviti još jednu i tako sve dok ne unese NE
         //Napraviti opcije programa o smjeru kretanja brojeva:
-        //1. dolje lijevo početak u smjeru kazaljke na satu(inicijalni zadatak)
-        //2. dolje desno početak u smjeru kazaljke na satu
+        //1. dolje desno početak u smjeru kazaljke na satu (inicijalni zadatak)
+        //2. dolje lijevo početak u smjeru kazaljke na satu
         //3. gore lijevo početak u smjeru kazaljke na satu
-        //4. gore desno početak u kontra smjeru kazaljke na satu
+        //4. gore desno početak u smjeru kazaljke na satu
         //5. dolje lijevo početak u kontra smjeru kazaljke na satu 
         //6. dolje desno početak u kontra smjeru kazaljke na satu
         //7. gore lijevo početak u kontra smjeru kazaljke na satu

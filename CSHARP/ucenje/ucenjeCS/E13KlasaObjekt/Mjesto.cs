@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucenjeCS.E13KlasaObjekt
+namespace UcenjeCS.E13KlasaObjekt
 {
     internal class Mjesto
     {

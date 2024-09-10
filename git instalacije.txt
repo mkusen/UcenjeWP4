@@ -1,0 +1,6 @@
+Instalirati doma
+Git sustav
+https://git-scm.com/downloads
+
+Program za rad s Git-om Github Deskop
+https://desktop.github.com/
